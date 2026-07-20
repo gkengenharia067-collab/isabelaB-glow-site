@@ -25,9 +25,9 @@ const HERO_FALLBACK =
 const WHATSAPP_BASE = "https://wa.me/5567992671108";
 const wa = (msg: string) => `${WHATSAPP_BASE}?text=${encodeURIComponent(msg)}`;
 const svcMsg = (name: string) =>
-  `Olá, Isabel! Gostaria de mais informações sobre o serviço de ${name}.`;
+  `Olá, Isabela! Gostaria de mais informações sobre o serviço de ${name}.`;
 const laserMsg = (region: string) =>
-  `Olá, Isabel! Gostaria de mais informações sobre Epilação a Laser - ${region}.`;
+  `Olá, Isabela! Gostaria de mais informações sobre Epilação a Laser - ${region}.`;
 
 type Service = { name: string; message: string };
 type Tab = { id: string; label: string; intro?: string; items: Service[] };
@@ -134,7 +134,7 @@ function Index() {
 
   const submitForm = (e: FormEvent) => {
     e.preventDefault();
-    const msg = `Olá, Isabel! Meu nome é ${form.nome} (${form.email}).\n\n${form.mensagem}`;
+    const msg = `Olá, Isabela! Meu nome é ${form.nome} (${form.email}).\n\n${form.mensagem}`;
     window.open(wa(msg), "_blank", "noopener,noreferrer");
   };
 
@@ -150,7 +150,7 @@ function Index() {
       >
         <div className="mx-auto max-w-7xl px-6 lg:px-10 h-20 flex items-center justify-between">
           <a href="#inicio" className="font-display text-xl md:text-2xl text-ink tracking-tight">
-            Isabel Bertolli <span className="text-graphite italic">Estética</span>
+            Isabela Bertolli <span className="text-graphite italic">Estética</span>
           </a>
           <nav className="hidden lg:flex items-center gap-9 text-sm tracking-wide">
             {NAV.map((n) => (
@@ -164,7 +164,7 @@ function Index() {
             ))}
           </nav>
           <a
-            href={wa("Olá, Isabel! Gostaria de agendar uma avaliação.")}
+            href={wa("Olá, Isabela! Gostaria de agendar uma avaliação.")}
             target="_blank"
             rel="noopener noreferrer"
             className="hidden lg:inline-flex items-center px-5 py-3 bg-ink text-white text-[11px] uppercase tracking-[0.2em] hover:bg-beige hover:text-ink transition-colors"
@@ -193,7 +193,7 @@ function Index() {
                 </a>
               ))}
               <a
-                href={wa("Olá, Isabel! Gostaria de agendar uma avaliação.")}
+                href={wa("Olá, Isabela! Gostaria de agendar uma avaliação.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMenu}
@@ -210,7 +210,7 @@ function Index() {
       <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <img
           src={heroSrc}
-          alt="Isabel Bertolli Estética"
+          alt="Isabela Bertolli Estética"
           className="absolute inset-0 w-full h-full object-cover"
           onError={() => setHeroSrc(HERO_FALLBACK)}
         />
@@ -226,14 +226,14 @@ function Index() {
             Estética | Saúde | Beleza
           </p>
           <h1 className="font-display text-white text-5xl md:text-7xl leading-[1.05] mb-6">
-            Isabel Bertolli <span className="italic font-normal">Estética</span>
+            Isabela Bertolli <span className="italic font-normal">Estética</span>
           </h1>
           <div className="w-16 h-px bg-beige mx-auto mb-6" />
           <p className="text-white/90 text-base md:text-lg font-light tracking-wide mb-10 max-w-xl mx-auto">
             Há 10 anos priorizando a qualidade da sua pele
           </p>
           <a
-            href={wa("Olá, Isabel! Gostaria de agendar uma avaliação.")}
+            href={wa("Olá, Isabela! Gostaria de agendar uma avaliação.")}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center px-8 py-4 bg-beige text-ink text-[11px] uppercase tracking-[0.25em] hover:bg-white transition-colors"
@@ -248,7 +248,7 @@ function Index() {
         <div className="mx-auto max-w-5xl px-6 text-center reveal">
           <p className="uppercase tracking-[0.3em] text-xs text-graphite mb-4">Sobre</p>
           <h2 className="font-display text-4xl md:text-5xl text-ink mb-8">
-            Sobre Isabel Bertolli
+            Sobre Isabela Bertolli
           </h2>
           <div className="w-12 h-px bg-beige mx-auto mb-10" />
           <p className="text-graphite text-base md:text-lg leading-relaxed max-w-3xl mx-auto font-light">
@@ -346,7 +346,7 @@ function Index() {
               Agende uma visita ou entre em contato pelo WhatsApp
             </p>
             <a
-              href={wa("Olá, Isabel! Gostaria de agendar uma visita.")}
+              href={wa("Olá, Isabela! Gostaria de agendar uma visita.")}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-6 py-3 bg-ink text-white text-[11px] uppercase tracking-[0.25em] hover:bg-beige hover:text-ink transition-colors"
@@ -356,7 +356,7 @@ function Index() {
           </div>
           <div className="reveal border border-beige overflow-hidden aspect-[4/3]">
             <iframe
-              title="Mapa Isabel Bertolli Estética"
+              title="Mapa Isabela Bertolli Estética"
               src="https://www.google.com/maps?q=Rua+Spipe+Calarge+455+Campo+Grande+MS&output=embed"
               className="w-full h-full"
               loading="lazy"
@@ -438,7 +438,7 @@ function Index() {
       <footer className="bg-ink text-white pt-20 pb-8">
         <div className="mx-auto max-w-6xl px-6 grid md:grid-cols-3 gap-12 mb-16">
           <div>
-            <h3 className="font-display text-2xl mb-4">Isabel Bertolli</h3>
+            <h3 className="font-display text-2xl mb-4">Isabela Bertolli</h3>
             <p className="text-beige uppercase tracking-[0.25em] text-[11px] mb-6">
               Estética | Saúde | Beleza
             </p>
@@ -451,7 +451,7 @@ function Index() {
             <ul className="space-y-3 text-sm font-light">
               <li>
                 <a
-                  href={wa("Olá, Isabel! Gostaria de agendar uma avaliação.")}
+                  href={wa("Olá, Isabela! Gostaria de agendar uma avaliação.")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-beige transition-colors"
@@ -488,7 +488,7 @@ function Index() {
           </div>
         </div>
         <div className="mx-auto max-w-6xl px-6 border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-white/60">
-          <p>© 2026 Isabel Bertolli Estética - Todos os direitos reservados</p>
+          <p>© 2026 Isabela Bertolli Estética - Todos os direitos reservados</p>
           <a
             href="https://wa.me/5567999222720?text=Olá%20Gabriel!%20Vi%20seu%20trabalho%20no%20site%20da%20Isabel%20Bertolli%20e%20tenho%20interesse%20em%20criar%20um%20site%20também.%20Podemos%20conversar%3F"
             target="_blank"
@@ -502,7 +502,7 @@ function Index() {
 
       {/* FLOATING WHATSAPP */}
       <a
-        href="https://wa.me/5567992671108?text=Olá%20Isabel!%20Gostaria%20de%20agendar%20uma%20avaliação%20ou%20tirar%20dúvidas%20sobre%20os%20procedimentos."
+        href="https://wa.me/5567992671108?text=Olá%20Isabela!%20Gostaria%20de%20agendar%20uma%20avaliação%20ou%20tirar%20dúvidas%20sobre%20os%20procedimentos."
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Fale conosco no WhatsApp"

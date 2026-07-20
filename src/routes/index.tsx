@@ -342,17 +342,6 @@ function Index() {
                 Tv Morena, Campo Grande - MS
               </p>
             </div>
-            <p className="text-graphite font-light italic mb-8">
-              Agende uma visita ou entre em contato pelo WhatsApp
-            </p>
-            <a
-              href={wa("Olá, Isabela! Gostaria de agendar uma visita.")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center px-6 py-3 bg-ink text-white text-[11px] uppercase tracking-[0.25em] hover:bg-beige hover:text-ink transition-colors"
-            >
-              Fale no WhatsApp
-            </a>
           </div>
           <div className="reveal border border-beige overflow-hidden aspect-[4/3]">
             <iframe

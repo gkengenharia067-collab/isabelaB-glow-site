@@ -17,7 +17,8 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const HERO_IMG = "/images/hero-bg.jpg";
+// 🔥 ALTERAÇÃO 1: Imagem agora vem do Google Drive (link direto)
+const HERO_IMG = "https://drive.google.com/uc?export=view&id=1nMB3LJecDiEthtuzNhyIS4gz6_0DMDUE";
 
 const WHATSAPP_BASE = "https://wa.me/5567992671108";
 const wa = (msg: string) => `${WHATSAPP_BASE}?text=${encodeURIComponent(msg)}`;
@@ -164,7 +165,7 @@ function Index() {
             href={wa("Olá, Isabela! Gostaria de agendar uma avaliação.")}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden lg:inline-flex items-center px-5 py-3 bg-ink text-white text-[11px] uppercase tracking-[0.2em] hover:bg-beige hover:text-ink transition-colors"
+            className="hidden lg:inline-flex items-center px-5 py-3 bg-[#4A4A4A] text-white text-[11px] uppercase tracking-[0.2em] hover:bg-beige hover:text-ink transition-colors"
           >
             Agendar Avaliação
           </a>
@@ -194,7 +195,7 @@ function Index() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMenu}
-                className="mt-2 inline-flex justify-center px-5 py-3 bg-ink text-white text-[11px] uppercase tracking-[0.2em]"
+                className="mt-2 inline-flex justify-center px-5 py-3 bg-[#4A4A4A] text-white text-[11px] uppercase tracking-[0.2em]"
               >
                 Agendar Avaliação
               </a>
@@ -205,11 +206,11 @@ function Index() {
 
       {/* HERO */}
       <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* 🔥 ALTERAÇÃO 2: removeu o onError (sem fallback) */}
         <img
           src={heroSrc}
           alt="Isabela Bertolli Estética"
           className="absolute inset-0 w-full h-full object-cover"
-          onError={() => setHeroSrc(HERO_FALLBACK)}
         />
         <div
           className="absolute inset-0"
@@ -289,7 +290,7 @@ function Index() {
                 onClick={() => setActiveTab(t.id)}
                 className={`px-5 py-3 text-[11px] uppercase tracking-[0.2em] border transition-colors ${
                   activeTab === t.id
-                    ? "bg-ink text-white border-ink"
+                    ? "bg-[#4A4A4A] text-white border-[#4A4A4A]"
                     : "bg-white text-ink border-beige hover:bg-beige"
                 }`}
               >
@@ -315,7 +316,7 @@ function Index() {
                   href={wa(s.message)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-5 py-3 rounded-full bg-ink text-white text-[11px] uppercase tracking-[0.2em] hover:bg-beige hover:text-ink transition-colors w-full"
+                  className="inline-flex items-center justify-center px-5 py-3 rounded-full bg-[#4A4A4A] text-white text-[11px] uppercase tracking-[0.2em] hover:bg-beige hover:text-ink transition-colors w-full"
                 >
                   Agendar
                 </a>
@@ -412,7 +413,7 @@ function Index() {
             />
             <button
               type="submit"
-              className="w-full px-6 py-4 bg-ink text-white text-[11px] uppercase tracking-[0.25em] hover:bg-beige hover:text-ink transition-colors"
+              className="w-full px-6 py-4 bg-[#4A4A4A] text-white text-[11px] uppercase tracking-[0.25em] hover:bg-beige hover:text-ink transition-colors"
             >
               Enviar via WhatsApp
             </button>
@@ -492,7 +493,7 @@ function Index() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Fale conosco no WhatsApp"
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-ink border border-beige flex items-center justify-center hover:bg-beige transition-colors group"
+        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#4A4A4A] border border-beige flex items-center justify-center hover:bg-beige transition-colors group"
       >
         <svg
           viewBox="0 0 24 24"
@@ -509,7 +510,7 @@ function Index() {
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           aria-label="Voltar ao topo"
-          className="fixed bottom-24 right-6 z-50 w-11 h-11 bg-ink border border-beige flex items-center justify-center hover:bg-beige transition-colors group"
+          className="fixed bottom-24 right-6 z-50 w-11 h-11 bg-[#4A4A4A] border border-beige flex items-center justify-center hover:bg-beige transition-colors group"
         >
           <ArrowUp size={18} className="text-beige group-hover:text-ink transition-colors" />
         </button>

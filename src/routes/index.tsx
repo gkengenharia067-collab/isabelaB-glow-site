@@ -202,26 +202,25 @@ function Index() {
         )}
       </header>
 
-      {/* HERO */}
-      <section id="inicio" className="relative h-screen flex items-center justify-center overflow-hidden">
+      {/* HERO - botão na parte inferior */}
+      <section id="inicio" className="relative h-screen flex items-end justify-center overflow-hidden">
         <img
           src={HERO_IMG}
           alt="Isabela Bertolli"
           className="absolute inset-0 w-full h-full object-cover object-top"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
-        {/* Conteúdo centralizado com botão descido (mt-32) */}
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+        {/* Conteúdo na parte inferior */}
+        <div className="relative z-10 w-full max-w-4xl mx-auto px-6 pb-12 md:pb-16 text-center">
           <a
             href={wa("Olá, Isabela! Gostaria de agendar uma avaliação.")}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-8 py-4 bg-beige text-ink text-[11px] uppercase tracking-[0.25em] hover:bg-white transition-colors shadow-lg mt-32"
+            className="inline-flex items-center px-8 py-4 bg-beige text-ink text-[11px] uppercase tracking-[0.25em] hover:bg-white transition-colors shadow-lg"
           >
             Agende sua avaliação
           </a>
-          {/* FRASE ELIMINADA */}
         </div>
       </section>
 

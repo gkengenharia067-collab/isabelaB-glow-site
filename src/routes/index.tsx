@@ -17,10 +17,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const HERO_IMG =
-  "https://drive.google.com/uc?export=view&id=1nMB3LJecDiEthtuzNhyIS4gz6_0DMDUE";
-const HERO_FALLBACK =
-  "https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=1920&q=80";
+const HERO_IMG = "/images/hero-bg.jpg";
 
 const WHATSAPP_BASE = "https://wa.me/5567992671108";
 const wa = (msg: string) => `${WHATSAPP_BASE}?text=${encodeURIComponent(msg)}`;

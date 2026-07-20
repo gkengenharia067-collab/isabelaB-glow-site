@@ -17,7 +17,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const HERO_IMG = "/images/hero-bg.jpeg";
+const HERO_IMG = "/images/hero-bg.jpg";
 
 const WHATSAPP_BASE = "https://wa.me/5567992671108";
 const wa = (msg: string) => `${WHATSAPP_BASE}?text=${encodeURIComponent(msg)}`;

@@ -17,7 +17,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-// Imagem local (agora com .jpeg)
+// Imagem local
 const HERO_IMG = "/images/hero-bg.jpg.jpeg";
 
 const WHATSAPP_BASE = "https://wa.me/5567992671108";
@@ -203,29 +203,32 @@ function Index() {
         )}
       </header>
 
-      {/* HERO - apenas imagem com overlay, sem textos sobrepostos */}
+      {/* HERO - imagem com overlay e conteúdo na parte inferior */}
       <section id="inicio" className="relative h-screen flex items-end justify-center overflow-hidden">
         <img
           src={HERO_IMG}
           alt="Isabela Bertolli"
           className="absolute inset-0 w-full h-full object-cover object-top"
         />
-        {/* Overlay escuro suave para legibilidade */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
 
-        {/* Conteúdo na parte inferior da imagem */}
-        <div className="relative z-10 w-full max-w-4xl mx-auto px-6 pb-12 md:pb-16 text-center">
-          <p className="text-white/90 text-base md:text-lg font-light tracking-wide mb-4 max-w-2xl mx-auto drop-shadow-md">
-            Há 10 anos priorizando a qualidade da sua pele
-          </p>
-          <a
-            href={wa("Olá, Isabela! Gostaria de agendar uma avaliação.")}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-8 py-4 bg-beige text-ink text-[11px] uppercase tracking-[0.25em] hover:bg-white transition-colors shadow-lg"
-          >
-            Agende sua avaliação
-          </a>
+        {/* Conteúdo na parte inferior, alinhado conforme solicitado */}
+        <div className="relative z-10 w-full max-w-4xl mx-auto px-6 pb-12 md:pb-16">
+          <div className="flex flex-col items-center">
+            {/* Botão principal */}
+            <a
+              href={wa("Olá, Isabela! Gostaria de agendar uma avaliação.")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-8 py-4 bg-beige text-ink text-[11px] uppercase tracking-[0.25em] hover:bg-white transition-colors shadow-lg"
+            >
+              Agende sua avaliação
+            </a>
+            {/* Frase abaixo e deslocada para a direita */}
+            <p className="text-white/90 text-base md:text-lg font-light tracking-wide mt-4 ml-8 drop-shadow-md">
+              Há 10 anos priorizando a qualidade da sua pele
+            </p>
+          </div>
         </div>
       </section>
 

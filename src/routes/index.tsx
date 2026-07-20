@@ -17,7 +17,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-// 🔥 ALTERAÇÃO 1: Imagem agora vem do Google Drive (link direto)
+// Imagem local (agora com .jpeg)
 const HERO_IMG = "/images/hero-bg.jpg.jpeg";
 
 const WHATSAPP_BASE = "https://wa.me/5567992671108";
@@ -98,7 +98,6 @@ function Index() {
   const [scrolled, setScrolled] = useState(false);
   const [activeTab, setActiveTab] = useState(TABS[0].id);
   const [showTop, setShowTop] = useState(false);
-  const [heroSrc, setHeroSrc] = useState(HERO_IMG);
   const [form, setForm] = useState({ nome: "", email: "", mensagem: "" });
 
   useEffect(() => {
@@ -140,14 +139,14 @@ function Index() {
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
-      {/* HEADER */}
+      {/* HEADER - fundo transparente com leve escurecimento */}
       <header
         className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-          scrolled ? "bg-background/95 backdrop-blur shadow-sm" : "bg-background"
+          scrolled ? "bg-black/40 backdrop-blur-sm" : "bg-black/20"
         }`}
       >
         <div className="mx-auto max-w-7xl px-6 lg:px-10 h-20 flex items-center justify-between">
-          <a href="#inicio" className="font-display text-xl md:text-2xl text-ink tracking-tight">
+          <a href="#inicio" className="font-display text-xl md:text-2xl text-white tracking-tight">
             Isabela Bertolli
           </a>
           <nav className="hidden lg:flex items-center gap-9 text-sm tracking-wide">
@@ -155,7 +154,7 @@ function Index() {
               <a
                 key={n.href}
                 href={n.href}
-                className="text-ink hover:text-graphite transition-colors uppercase text-[12px] tracking-[0.15em]"
+                className="text-white/80 hover:text-white transition-colors uppercase text-[12px] tracking-[0.15em]"
               >
                 {n.label}
               </a>
@@ -170,7 +169,7 @@ function Index() {
             Agendar Avaliação
           </a>
           <button
-            className="lg:hidden p-2 text-ink"
+            className="lg:hidden p-2 text-white"
             aria-label="Abrir menu"
             onClick={() => setMenuOpen((v) => !v)}
           >
@@ -178,14 +177,14 @@ function Index() {
           </button>
         </div>
         {menuOpen && (
-          <div className="lg:hidden border-t border-beige bg-background">
+          <div className="lg:hidden border-t border-white/10 bg-black/60 backdrop-blur-sm">
             <div className="px-6 py-6 flex flex-col gap-5">
               {NAV.map((n) => (
                 <a
                   key={n.href}
                   href={n.href}
                   onClick={closeMenu}
-                  className="text-ink uppercase text-sm tracking-[0.15em]"
+                  className="text-white uppercase text-sm tracking-[0.15em]"
                 >
                   {n.label}
                 </a>
@@ -204,37 +203,26 @@ function Index() {
         )}
       </header>
 
-      {/* HERO */}
-      <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* 🔥 ALTERAÇÃO 2: removeu o onError (sem fallback) */}
+      {/* HERO - apenas imagem com overlay, sem textos sobrepostos */}
+      <section id="inicio" className="relative h-screen flex items-end justify-center overflow-hidden">
         <img
-          src={heroSrc}
-          alt="Isabela Bertolli Estética"
-          className="absolute inset-0 w-full h-full object-cover"
+          src={HERO_IMG}
+          alt="Isabela Bertolli"
+          className="absolute inset-0 w-full h-full object-cover object-top"
         />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(ellipse at center, rgba(26,26,26,0.35) 0%, rgba(26,26,26,0.75) 100%)",
-          }}
-        />
-        <div className="relative z-10 text-center px-6 max-w-3xl fade-in-up">
-          <p className="text-beige uppercase tracking-[0.4em] text-xs md:text-sm mb-6">
-            Estética | Saúde | Beleza
-          </p>
-          <h1 className="font-display text-white text-5xl md:text-7xl leading-[1.05] mb-6">
-            Isabela Bertolli
-          </h1>
-          <div className="w-16 h-px bg-beige mx-auto mb-6" />
-          <p className="text-white/90 text-base md:text-lg font-light tracking-wide mb-10 max-w-xl mx-auto">
+        {/* Overlay escuro suave para legibilidade */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+
+        {/* Conteúdo na parte inferior da imagem */}
+        <div className="relative z-10 w-full max-w-4xl mx-auto px-6 pb-12 md:pb-16 text-center">
+          <p className="text-white/90 text-base md:text-lg font-light tracking-wide mb-4 max-w-2xl mx-auto drop-shadow-md">
             Há 10 anos priorizando a qualidade da sua pele
           </p>
           <a
             href={wa("Olá, Isabela! Gostaria de agendar uma avaliação.")}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-8 py-4 bg-beige text-ink text-[11px] uppercase tracking-[0.25em] hover:bg-white transition-colors"
+            className="inline-flex items-center px-8 py-4 bg-beige text-ink text-[11px] uppercase tracking-[0.25em] hover:bg-white transition-colors shadow-lg"
           >
             Agende sua avaliação
           </a>

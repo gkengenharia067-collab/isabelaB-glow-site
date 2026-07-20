@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
 });
 
 // 🔥 ALTERAÇÃO 1: Imagem agora vem do Google Drive (link direto)
-const HERO_IMG = "https://drive.google.com/uc?export=view&id=1nMB3LJecDiEthtuzNhyIS4gz6_0DMDUE";
+const HERO_IMG = "/images/hero-bg.jpg.jpeg";
 
 const WHATSAPP_BASE = "https://wa.me/5567992671108";
 const wa = (msg: string) => `${WHATSAPP_BASE}?text=${encodeURIComponent(msg)}`;

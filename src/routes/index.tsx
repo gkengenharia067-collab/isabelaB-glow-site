@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
 });
 
 // 🔥 ALTERAÇÃO 1: Imagem agora vem do Google Drive (link direto)
-const HERO_IMG = "https://drive.google.com/uc?export=view&id=1nMB3LJecDiEthtuzNhyIS4gz6_0DMDUE";
+const HERO_IMG = "/images/hero-bg.jpg.jpeg";
 
 const WHATSAPP_BASE = "https://wa.me/5567992671108";
 const wa = (msg: string) => `${WHATSAPP_BASE}?text=${encodeURIComponent(msg)}`;
@@ -148,7 +148,7 @@ function Index() {
       >
         <div className="mx-auto max-w-7xl px-6 lg:px-10 h-20 flex items-center justify-between">
           <a href="#inicio" className="font-display text-xl md:text-2xl text-ink tracking-tight">
-            Isabela Bertolli <span className="text-graphite italic">Estética</span>
+            Isabela Bertolli
           </a>
           <nav className="hidden lg:flex items-center gap-9 text-sm tracking-wide">
             {NAV.map((n) => (
@@ -224,7 +224,7 @@ function Index() {
             Estética | Saúde | Beleza
           </p>
           <h1 className="font-display text-white text-5xl md:text-7xl leading-[1.05] mb-6">
-            Isabela Bertolli <span className="italic font-normal">Estética</span>
+            Isabela Bertolli
           </h1>
           <div className="w-16 h-px bg-beige mx-auto mb-6" />
           <p className="text-white/90 text-base md:text-lg font-light tracking-wide mb-10 max-w-xl mx-auto">

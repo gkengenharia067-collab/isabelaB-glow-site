@@ -311,14 +311,14 @@ function Index() {
             {tab.items.map((s) => (
               <div
                 key={s.name}
-                className="bg-white border border-beige p-8 flex flex-col justify-between hover:shadow-md transition-shadow"
+                className="bg-white border border-beige rounded-2xl shadow-sm p-8 flex flex-col justify-between hover:shadow-lg hover:-translate-y-0.5 transition-all"
               >
                 <h3 className="font-display text-xl text-ink mb-6">{s.name}</h3>
                 <a
                   href={wa(s.message)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-5 py-3 bg-ink text-white text-[11px] uppercase tracking-[0.2em] hover:bg-beige hover:text-ink transition-colors w-full"
+                  className="inline-flex items-center justify-center px-5 py-3 rounded-full bg-ink text-white text-[11px] uppercase tracking-[0.2em] hover:bg-beige hover:text-ink transition-colors w-full"
                 >
                   Agendar
                 </a>

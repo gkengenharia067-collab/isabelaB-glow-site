@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
 });
 
 const HERO_IMG =
-  "https://drive.google.com/uc?export=view&id=1AcmKELnlDpuLChen9ZjjKhc9_9FVuoWf";
+  "https://drive.google.com/uc?export=view&id=1nMB3LJecDiEthtuzNhyIS4gz6_0DMDUE";
 const HERO_FALLBACK =
   "https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=1920&q=80";
 

@@ -490,7 +490,7 @@ function Index() {
         <div className="mx-auto max-w-6xl px-6 border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-white/60">
           <p>© 2026 Isabela Bertolli Estética - Todos os direitos reservados</p>
           <a
-            href="https://wa.me/5567999222720?text=Olá%20Gabriel!%20Vi%20seu%20trabalho%20no%20site%20da%20Isabel%20Bertolli%20e%20tenho%20interesse%20em%20criar%20um%20site%20também.%20Podemos%20conversar%3F"
+            href="https://wa.me/5567999222720?text=Olá%20Gabriel!%20Vi%20seu%20trabalho%20no%20site%20da%20Isabela%20Bertolli%20e%20tenho%20interesse%20em%20criar%20um%20site%20também.%20Podemos%20conversar%3F"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-beige transition-colors"

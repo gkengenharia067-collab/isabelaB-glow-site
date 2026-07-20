@@ -211,13 +211,13 @@ function Index() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
 
-        {/* Conteúdo centralizado com botão descido */}
+        {/* Conteúdo centralizado com botão descido (mt-32) */}
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
           <a
             href={wa("Olá, Isabela! Gostaria de agendar uma avaliação.")}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-8 py-4 bg-beige text-ink text-[11px] uppercase tracking-[0.25em] hover:bg-white transition-colors shadow-lg mt-12"
+            className="inline-flex items-center px-8 py-4 bg-beige text-ink text-[11px] uppercase tracking-[0.25em] hover:bg-white transition-colors shadow-lg mt-32"
           >
             Agende sua avaliação
           </a>
